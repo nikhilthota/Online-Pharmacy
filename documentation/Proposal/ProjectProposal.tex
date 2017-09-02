@@ -1,0 +1,176 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stylish Article
+% LaTeX Template
+% Version 2.1 (1/10/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com) 
+% With extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[fleqn,10pt]{../SelfArx} % Document font size and equations flushed left
+
+\usepackage[english]{babel} % Specify a different language here - english by default
+
+\usepackage{lipsum} % Required to insert dummy text. To be removed otherwise
+
+\setcounter{tocdepth}{2}
+
+%----------------------------------------------------------------------------------------
+%	COLUMNS
+%----------------------------------------------------------------------------------------
+
+\sffamily
+
+\setlength{\columnsep}{0.55cm} % Distance between the two columns of text
+\setlength{\fboxrule}{0.75pt} % Width of the border around the abstract
+
+%----------------------------------------------------------------------------------------
+%	COLORS
+%----------------------------------------------------------------------------------------
+
+\definecolor{color1}{RGB}{0,0,90} % Color of the article title and sections
+\definecolor{color2}{RGB}{0,20,20} % Color of the boxes behind the abstract and headings
+
+%----------------------------------------------------------------------------------------
+%	HYPERLINKS
+%----------------------------------------------------------------------------------------
+
+\usepackage{hyperref} % Required for hyperlinks
+\hypersetup{hidelinks,colorlinks,breaklinks=true,urlcolor=color2,citecolor=color1,linkcolor=color1,bookmarksopen=false,pdftitle={Title},pdfauthor={Author}}
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE INFORMATION
+%----------------------------------------------------------------------------------------
+
+\JournalInfo{Ver. 1.0} % Journal information
+\Archive{} % Additional notes (e.g. copyright, DOI, review/research article)
+
+\PaperTitle{Online Pharmacy\\ \Large Project Proposal} % Article title
+
+\Authors{{\textbf{Team Members:}} \\Anil\\Mehak\\Nikhil\\Sai\\Sudhanshu\\Vikas } % Authors
+\affiliation{\textit{D-Enigma (Group - CS 01)}} % Author affiliation
+\affiliation{\textit{Indian Institute of Information Technology, Vadodara.}} % Author affiliation
+\Keywords{Keyword1 --- Keyword2 --- Keyword3} % Keywords - if you don't want any simply remove all the text between the curly brackets
+\newcommand{\keywordname}{Keywords} % Defines the keywords heading name
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\Abstract{\lipsum[1]~}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\sffamily
+\flushbottom % Makes all text pages the same height
+
+\maketitle % Print the title and abstract box
+
+\tableofcontents % Print the contents section
+
+\thispagestyle{empty} % Removes page numbering from the first page
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\section*{Introduction} % The \section*{} command stops section numbering
+
+\addcontentsline{toc}{section}{Introduction} % Adds this section to the table of contents
+
+We are making an “Amazon” like e-commerce platform of Pharmacy for our client. The website will contain a user end, a seller end and an admin end. We do have existing solution in market (1mg etc.), however most of the system are commissioned based and require approval process from third party (platform provider). This is tedious task as customer are not directly connected with pharmacy. Additionally, this is commissioned based and that is why most of the pharmacy are still not connected with online service provider or they have their local solution. So, we will provide a solution where there is no third party commission, customer will be directly able to interact with the pharmacy.
+
+%------------------------------------------------
+
+\section{User End}
+
+It is an interface for user where he/she will be able to search for pharmacy products and the nearest pharmacy where they are available. Our solution will consist of an algorithm which will guide to the nearest registered pharmacy where all his/her requirements will be met. User will have the choice to either buy the product online or go to the pharmacy (we will provide him/her the address of pharmacy) and buy it offline. Following are the functional requirements of the user interface:
+%------------------------------------------------
+\subsection{Registration}
+
+When a customer visits the site first time he/she will be asked to register an account. This page will ask the user to enter his Name, Email and Phone Contact. A verification OTP/Email will be send to the user and it will be used to authenticate the user.
+
+\subsection{Product Browsing}
+We will provide the user two option
+\subsubsection{OTC Products}
+User will be able to search these products and order them online or buy them offline.
+\subsubsection{Non OTC Products}
+These products will require a prescription from a doctor.
+%------------------------------------------------
+
+\subsection{Dealing with Prescription}
+We propose two solution for handling the prescription:
+\subsubsection{With a Prescription reader hired by the client}
+This Prescription reader will verify and convert the prescription into soft form. This list of products will be analysed by our algorithm and it will provide a list of all the sellers to the user where the product is available. This solution will require an extra man/men to be hired by the client but it will provide a more efficient and quicker solution. It will be able to easily handle the situation where products are not available in the same store but they are available in different store.
+\subsubsection{With prescription send to all the nearby sellers}
+In this case we will send prescription to all the nearby sellers. The seller will themselves verify and process the prescription and he/she will list all the items available in his/her shop. After this algorithm will analyse all the feedback from the sellers and provide the user with nearest stores where products are available. This solution is not optimal in our opinion because it may affect the seller and the buyer.
+%------------------------------------------------
+\subsection{Delivery Status}
+This will first give the user an estimate once the order is placed. After that it will continuously update according to the response of the delivery team.
+%------------------------------------------------
+
+\subsection{Share Deal on Social Network}
+We will integrate our app with some social media sites so that user can share his/her experience on social media.
+%------------------------------------------------
+\subsection{Review}
+User will be able to comment or give rating to a particular product or a seller regarding his/her experience. These ratings will be visible to all the user of site.
+%------------------------------------------------
+\subsection{Cart}
+User will be able to add/remove/modify the products in the cart. User can directly add OTC products into the cart. And once the prescription is analysed, user will be given an option to add the products into the cart. Cart will be used to place the order.
+%------------------------------------------------
+
+\section{Pharmacy End}
+
+It is an interface for the various Pharmacies which are interested in selling their products on our Platform. The seller will be first required to first register and then he/she will be able to list and sell his/her products in a few simple steps.
+%------------------------------------------------
+\subsection{Pharmacy Registration}
+
+Any Seller who wants to sell his/her product on our interface will be first required to provide a proof of his/her licence. Along with this they will need to enter the name of Pharmacy, name of owner, Address, Pharmacist’s Qualification and Contact Details. 
+%------------------------------------------------
+\subsection{Product Inventory}
+
+Seller will be able to list all the products available with him/her. The inventory will contain Product Name, Picture, Details, Expiry, Quantity, etc.
+%------------------------------------------------
+\subsection{Seller Dashboard}
+
+This will contain all the option for managing his account. This will include dealing with orders and prescription and Admin messages.
+%------------------------------------------------
+\subsection{Review}
+
+%------------------------------------------------
+\subsection{Delivery status}
+
+%------------------------------------------------
+\subsection{Contact user}
+
+%------------------------------------------------
+\phantomsection
+\section{Administrator End}
+
+\section*{Acknowledgments} % The \section*{} command stops section numbering
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+
+%\phantomsection
+%\bibliographystyle{unsrt}
+%\bibliography{}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
